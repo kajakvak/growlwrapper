@@ -1,5 +1,7 @@
 Wrapper script for Growl. Used to send notifications to the user when a process has finished. Specifically used for Maven builds, but can also be used for other programs as well.
 
+This instruction works for Windows with Cygwin.
+
 
 Usage
 =====

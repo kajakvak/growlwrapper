@@ -27,12 +27,17 @@ Setting up
 1. Download Growl for windows: http://www.growlforwindows.com/gfw/
 1. Download growlnotify for windows: http://www.growlforwindows.com/gfw/help/growlnotify.aspx
 1. Unzip and put growlnotify.exe in ~/bin
+1. Clone repository
+
+        git clone https://github.com/mortenberg80/growlwrapper.git
+
 1. Copy wrapper scripts from this repo and put them in ~/bin
 1. Ensure that ~/bin is on your PATH. Add the following to your .bashrc or .bash_profile
 
         if [ -d "${HOME}/bin" ] ; then
           PATH="${HOME}/bin:${PATH}"
         fi
+
 1. Create environment variable MVN\_HOME and point it to your maven directory
         
         export MVN_HOME=/opt/maven-2.2.1

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! $MVN_HOME ]
+if [ ! "$MVN_HOME" ]
 then
   echo "MVN_HOME not set"
   exit 1
@@ -9,7 +9,7 @@ fi
 ARGS=$@
 PWD=$(pwd)
 
-$MVN_HOME/bin/mvn ${ARGS}
+"$MVN_HOME/bin/mvn" ${ARGS}
 STATUS=$?
 PRIORITY=0
 
@@ -21,5 +21,5 @@ else
   PRIORITY=2
 fi
 
-growlnotify /p:$PRIORITY /s:true /t:"Maven task ${VSTATUS}" "Path: ${PWD}\nmvn ${ARGS}"
+growlnotify //p:$PRIORITY //s:true //t:"Maven task ${VSTATUS}" "Path: ${PWD}\nmvn ${ARGS}"
 exit $STATUS
